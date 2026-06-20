@@ -35,6 +35,4 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 Contributions are welcome! Please read the [CONTRIBUTING.md](CONTRIBUTING.md) file for details.
 
----
-
-Let me know if you'd like to switch to **Agent Mode** to automatically update your `README.md` file! 😊
+--- 😊
