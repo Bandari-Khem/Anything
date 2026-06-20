@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eLibrary - Register - Step 2</title>
+    <link rel="stylesheet" href="forms.css">
+</head>
+
+<body>
+    <header>
+        <h1>eLibrary</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <form id="registration-step2-form">
+                <h2 style="text-align: center; font-size: 22px;">Select an username for your account:</h2>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+
+                <button type="submit">Register</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 eLibrary. All rights reserved.</p>
+    </footer>
+    <script>
+        //registration - step2.js
+        // This JavaScript file will handle the second step of registration (username)
+        document.getElementById('registration-step2-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const username = document.getElementById('username').value;
+
+            // Simulate sending data to backend
+            // In a real app, this would be an AJAX request to a PHP endpoint
+            // For now, we'll just redirect to the login page
+
+            // Redirect to the login page after successful registration
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+
+</html>

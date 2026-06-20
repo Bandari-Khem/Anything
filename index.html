@@ -4,39 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Room Finder</title>
+    <title>eLibrary - Home</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- Header Section -->
     <header>
+        <div
+            style="display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 10px 20px;">
+            <div style="flex: 1;">
+                <h1 style="margin: 0;">eLibrary</h1>
+                <div style="margin-top: 10px; display: flex; align-items: center;">
+                    <input type="search" id="search-input" placeholder="Search..."
+                        style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; width: 300px;" />
+                    <select id="filter-select"
+                        style="margin-left: 10px; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                        <option value="all">All Categories</option>
+                        <option value="fiction">Fiction</option>
+                        <option value="non-fiction">Non-Fiction</option>
+                        <option value="science">Science</option>
+                        <option value="technology">Technology</option>
+                    </select>
+                </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <a href="login.html" class="btn"
+                    style="padding: 8px 12px; background-color: #333; color: #fff; text-decoration: none; border-radius: 4px; cursor: pointer;">Login</a>
+                <a href="registration.html" class="btn"
+                    style="padding: 8px 12px; background-color: #333; color: #fff; text-decoration: none; border-radius: 4px; cursor: pointer;">Sign
+                    Up</a>
+            </div>
+        </div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Rooms</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="about-us.html">About Us</a></li>
             </ul>
         </nav>
     </header>
-
-    <!-- Main Content Section -->
     <main>
-        <!-- Room Listing Section -->
-        <section class="room-listing">
-            <h2>Room Listings</h2>
-            <div class="rooms-container">
-                <!-- Room Cards will be rendered here -->
-            </div>
+        <section>
+            <h2>Welcome to eLibrary</h2>
+            <p>Explore a vast collection of books and manage your reading experience.</p>
         </section>
-
-        <!-- Footer Section -->
-        <footer>
-            <p>&copy; 2023 Student Room Finder</p>
-        </footer>
     </main>
-
-    <script src="scripts.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eLibrary - Register</title>
+    <link rel="stylesheet" href="forms.css">
+</head>
+
+<body>
+    <header>
+        <h1>eLibrary</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <form id="registration-form">
+                <h2 style="text-align: center;">Register your Account:</h2>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <div>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <label for="confirm-password">Confirm Password:</label>
+                <div>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+
+                <button type="submit">Next Step</button>
+            </form>
+        </section>
+    </main>
+    <script src="regvalidation.js"></script>
+</body>
+
+</html>
