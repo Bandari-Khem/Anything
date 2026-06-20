@@ -1,10 +1,10 @@
 # 🌟 My GitHub Profile
 
-Hi, I'm **[Your Name]**, a [Your Profession/Role, e.g., Developer, Designer, Student, etc.]. I enjoy working with [Technologies, e.g., Python, JavaScript, React, etc.] and creating projects that solve real-world problems.
+Hi, I'm Khem Raj Bhandari, a student who learn through his mista. I enjoy working with techies and creating projects that solve real-world problems.
 
 ## 🧠 About Me
 
-I'm passionate about [your interests, e.g., building web applications, open source contributions, learning new technologies, etc.]. I believe in [your philosophy, e.g., clean code, collaboration, continuous learning, etc.].
+I'm passionate about being a software developer. I believe in [your philosophy, e.g., clean code, collaboration, continuous learning, etc.].
 
 ## 🚀 Projects
 
