@@ -1,3 +1,4 @@
+<!-- /login.html -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,27 +21,39 @@
             </ul>
         </nav>
     </header>
+
     <main>
+
         <section>
+            <div class="message" style=" float: left; width: 30%;">
+                <p>
+                    Welcome back! Log in to your account to access your personalized reading experience, manage your
+                    profile, and enjoy exclusive features.
+                </p>
+            </div>
             <form id="login-form">
                 <h2 style="text-align: center;">Login</h2>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+                <label for="username">Enter your username:</label>
+                <input type="text" id="username" name="username" placeholder="username.." required>
 
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <!-- Add this inside the form or near the login buttons -->
-                <p>
-                    <a href="reset-password.html" style="color: #007BFF; text-decoration: none;">Forgot Password?</a>
+                <label for="password">Enter your password:</label>
+                <input type="password" id="password" name="password" placeholder="password.." required>
+
+                <p style="float: right; margin-right: 20px;">
+                    <a href="registration.html"
+                        style="color: #007BFF; font-family: sans-serif;text-align: right;text-decoration: none;">Sign
+                        Up</a>
                 </p>
-
-                <button type="submit">Login</button>
+                <p style="float: left;">
+                    <a href="reset-password.html"
+                        style="color: #007BFF;text-decoration: none; font-family: sans-serif;">Forgot Password</a>
+                </p>
+                <p>
+                    <button type="submit">Login</button>
+                </p>
             </form>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 eLibrary. All rights reserved.</p>
-    </footer>
 </body>
 
 </html>

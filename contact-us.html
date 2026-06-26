@@ -4,40 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eLibrary_Contact_Us</title>
+    <title>Share Your Thoughts.</title>
     <link rel="stylesheet" href="forms.css">
 </head>
 
 <body>
     <header>
-        <h1>eLibrary</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="books.html">Books</a></li>
-                <li><a href="contact-us.html">Contact Us</a></li>
-                <li><a href="about-us.html">About Us</a></li>
-            </ul>
-        </nav>
+        <div
+            style="display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 10px 20px;">
+            <div style="flex: 1;">
+                <div>
+                    <h1>eLibrary</h1>
+                </div>
+                <div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="books.html">Books</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
     </header>
-    <main>
-        <section>
-            <form id="contact-form">
-                <h2 style="text-align: center;">Please fill this form and write your message:</h2>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+    <main style="justify-content: center;align-items: center;">
+        <div class="message-container">
+            <div class="message" style="float: left; width: 30%;">
+                <p>
+                    We're here to help! If you have any questions, suggestions, or need assistance with your account,
+                    feel free to reach out to our support team.
+                </p>
+            </div><br><br>
+            <div class="message" style="float: right; width: 30%;">
+                <p>
+                    Our dedicated support team is 24/7 available to help you with any issues you may encounter while
+                    using
+                    eLibrary. We're committed to providing prompt and helpful responses to ensure a smooth experience
+                    for all our users.
+                </p>
+            </div>
+        </div>
 
-                <label for="message">Message:</label>
-                <textarea placeholder="write your message.." name="message" id="message" cols="30" rows="10"
-                    required></textarea>
+        <form id="contact-form">
+            <h2>Please fill this form and leave your message:</h2>
+            <label for="name">uName:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your username.." required>
 
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email.." required>
+
+            <label for="message">Message:</label>
+            <textarea placeholder="write your message.." name="message" id="message" cols="30" rows="10"
+                required></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+        </form>
     </main>
+
+    <footer>
+        <h1>@ 2025 eLibrary. All rights reserved.</h1>
+
+        <p>eLibrary is a digital platform for book lovers. Explore, read, and manage your reading experience with
+            ease.</p>
+    </footer>
 </body>
 
 </html>

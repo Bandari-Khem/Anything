@@ -15,8 +15,7 @@ document.getElementById('registration-form').addEventListener('submit', function
     // List of known fake email domains
     const fakeDomains = ['example.com', 'test.com', 'dummy.com', 'fakeemail.com'];
 
-    // Check if email contains a fake domain
-    const domain = email.split('@')[1];
+    const domain = email.split('@')[1];//split seperates text from given point.
     if (fakeDomains.includes(domain)) {
         alert('We cannot accept fake email addresses. Please use a real email.');
         return;
@@ -34,10 +33,6 @@ document.getElementById('registration-form').addEventListener('submit', function
         alert('Passwords do not match.');
         return;
     }
-
-    // Simulate sending data to backend
-    // In a real app, this would be an AJAX request to a PHP endpoint
-    // For now, we'll just move to the second step
 
     // Redirect to the second registration step
     window.location.href = 'registration-step2.html';

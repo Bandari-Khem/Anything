@@ -23,28 +23,22 @@
     <main>
         <section>
             <form id="registration-step2-form">
-                <h2 style="text-align: center; font-size: 22px;">Select an username for your account:</h2>
+                <p
+                    style="float: left;text-decoration: none;font-family: sans-serif;font-size: large; font-weight: 600;">
+                    <a href="registration.html" style="float: left; margin-left: 20px;">👈Go
+                        Back</a>
+                </p><br><br>
+                <h2 style="float: left; font-size: 22px;">Select an username for your account:</h2>
                 <input type="text" id="username" name="username" placeholder="Username" required>
 
                 <button type="submit">Register</button>
             </form>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 eLibrary. All rights reserved.</p>
-    </footer>
     <script>
-        //registration - step2.js
         // This JavaScript file will handle the second step of registration (username)
         document.getElementById('registration-step2-form').addEventListener('submit', function (e) {
             e.preventDefault();
-
-            const username = document.getElementById('username').value;
-
-            // Simulate sending data to backend
-            // In a real app, this would be an AJAX request to a PHP endpoint
-            // For now, we'll just redirect to the login page
-
             // Redirect to the login page after successful registration
             window.location.href = 'login.html';
         });
