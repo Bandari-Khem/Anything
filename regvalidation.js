@@ -4,36 +4,44 @@ document.getElementById('registration-form').addEventListener('submit', function
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirm-password').value;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    const domain = email.split('@')[1];
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
+
+
+    // List of Allowed Domains
+    const allowedDomains = [
+        'gmail.com',
+        'yahoo.com',
+        'hotmail.com',
+        'outlook.com',
+        'mail.com',
+        'icloud.com'
+    ];
 
     // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
     if (!emailRegex.test(email)) {
         alert('Please enter a valid email address.');
         return;
     }
-
-    // List of known fake email domains
-    const fakeDomains = ['example.com', 'test.com', 'dummy.com', 'fakeemail.com'];
-
-    const domain = email.split('@')[1];//split seperates text from given point.
-    if (fakeDomains.includes(domain)) {
-        alert('We cannot accept fake email addresses. Please use a real email.');
+    //split seperates text from given point.
+    else if (!allowedDomains.includes(domain)) {
+        alert("We can't accept this email domain for now!!");
         return;
     }
 
-    // Validate password strength
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
-    if (!passwordRegex.test(password)) {
+    else if (!passwordRegex.test(password)) {
         alert('Password must be at least 8 characters and include uppercase, lowercase, numbers, and special characters.');
         return;
     }
 
     // Check if passwords match
-    if (password !== confirmPassword) {
+    else if (password !== confirmPassword) {
         alert('Passwords do not match.');
         return;
     }
 
-    // Redirect to the second registration step
-    window.location.href = 'registration-step2.html';
+    else {
+        window.location.href = 'registration-step2.html';
+    }
 });

@@ -1,4 +1,3 @@
-/* src/static/bookstyle.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,7 +9,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #7147e3;
     color: #fff;
     padding: 10px 20px;
 }
@@ -39,6 +38,7 @@ nav ul li a {
     padding: 15px;
     border-radius: 5px;
     font-weight: bold;
+    box-shadow: 2px 3px 5px rgb(13, 219, 147);
     border: 2px pink;
     background-color: azure;
 }
@@ -73,25 +73,44 @@ nav ul li a:hover {
 }
 
 .book-list {
-    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.book-row {
+    display: flex;
+    gap: 20px;
+}
+
+.book-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
     padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 800px;
-    border-radius: 8px;
+    width: 48%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.book-list ul {
-    list-style: none;
-    padding: 0;
+.book-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-.book-list li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+.book-author {
+    text-align: left;
+    font-style: italic;
+    margin-bottom: 10px;
 }
 
-.book-list li:last-child {
-    border-bottom: none;
+.book-description {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.book-category {
+    text-align: right;
+    font-style: italic;
+    color: #666;
 }
