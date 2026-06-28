@@ -12,6 +12,7 @@ header {
     background-color: #7147e3;
     color: #fff;
     padding: 10px 20px;
+    font-family: sans-serif;
 }
 
 .logo {
@@ -32,7 +33,8 @@ nav ul li {
 
 nav ul li a {
     color: #5769cb;
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     font-size: larger;
     text-decoration: none;
     padding: 15px;
@@ -41,6 +43,7 @@ nav ul li a {
     box-shadow: 2px 3px 5px rgb(13, 219, 147);
     border: 2px pink;
     background-color: azure;
+    transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {

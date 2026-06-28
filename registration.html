@@ -6,6 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eLibrary - Register</title>
     <link rel="stylesheet" href="forms.css">
+    <style>
+        #guud p {
+            float: right;
+            margin-right: 20px;
+
+        }
+
+        #guud a {
+            color: #007BFF;
+            font-family: sans-serif;
+            text-align: right;
+            text-decoration: none;
+            text-align: end;
+        }
+
+        #guud a:hover {
+            color: blue;
+            text-decoration: underline;
+            text-shadow: 1px 1px 2px blue;
+        }
+    </style>
 </head>
 
 <body>
@@ -22,12 +43,12 @@
     </header>
     <main>
         <section>
-            <div class="message"
-                style="float: right; width: 30%;margin-top: 10px;margin-right: 10px;border-radius: 15px;">
-                <p>
+            <div class="hero">
+                <h2>
                     Ready to start your journey with eLibrary? Register for a free account today and begin exploring our
-                    vast collection of books. It's easy, secure, and completely free!
-                </p>
+                    vast collection of books.
+                </h2>
+                <p> It's easy, secure, and completely free!</p>
             </div>
             <form id="registration-form">
                 <h2 style="text-align: center;">Register your Account:</h2>
@@ -43,7 +64,14 @@
                 <div>
                     <input type="password" id="confirm-password" name="confirm-password" required>
                 </div>
+                <div id="guud">
+                    <p>
+                        <a href="login.html">Login</a>
+                    </p>
+                    <p>
+                        Already have an account!! </p>
 
+                </div>
                 <button type="submit">Next Step</button>
             </form>
         </section>
