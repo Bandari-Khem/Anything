@@ -1,0 +1,655 @@
+/* 
+   eLibrary - About Page
+    */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #ffffff16;
+    color: #20242a;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 
+   NAVIGATION
+    */
+
+.navbar {
+    min-height: 8dvh;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #7279c9, #8d98df);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 7px 14px;
+    border-radius: 6px;
+    transition: 0.4s ease;
+}
+
+.nav-links a:hover {
+    background: rgba(0, 0, 0, 0.25);
+    transition: 0.4s ease;
+}
+
+.nav-links a::after {
+    background: #7bbbef;
+}
+
+.nav-links a i {
+    color: rgb(178, 215, 212);
+    font-size: 2rem;
+    z-index: inherit;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-links a i:hover {
+    transform: rotate(100deg);
+}
+
+/* 
+   HERO
+    */
+
+.hero {
+    min-height: auto;
+    background-image: url("../images/home.jpg");
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg,
+            rgba(0, 0, 0, 0.72),
+            rgba(0, 0, 0, 0.42),
+            rgba(0, 0, 0, 0.68));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: gold;
+    max-width: 760px;
+    padding: 50px 25px;
+}
+
+.eyebrow,
+.section-heading>span,
+.testimonial-heading>span {
+    font-size: 1.4rem;
+    color: skyblue;
+    font-weight: 800;
+    letter-spacing: 2px;
+    opacity: 1;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.1;
+    margin: 12px 0 16px;
+}
+
+.hero p {
+    max-width: 65rem;
+    margin: auto;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+
+
+/* 
+   CARDS SECTION
+    */
+
+.cards-section,
+.dev-section {
+    padding: 75px 5% 85px;
+
+    background: linear-gradient(#afd1de, #ebb3dd, #b2d4de);
+}
+
+.section-heading,
+.dev-heading {
+    text-align: center;
+    max-width: 45rem;
+    margin: 0 auto 42px;
+}
+
+.section-heading>span,
+.testimonial-heading>span,
+.dev-heading>span {
+    color: #5962b8;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.section-heading h2,
+.testimonial-heading h2,
+.dev-heading h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.2;
+    margin: 9px 0 12px;
+}
+
+.section-heading p {
+    font-size: 1.4rem;
+    color: black;
+}
+
+/* Three columns */
+
+.cards,
+.devcards {
+    max-width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.info-card,
+.devcard {
+    min-height: 30dvh;
+    padding: 35px 30px;
+    border-radius: 18px;
+    color: whitesmoke;
+    background:
+        linear-gradient(145deg,
+            rgba(49, 77, 84, 0.95),
+            rgba(8, 17, 15, 0.9));
+
+    border: 1px solid rgba(52, 46, 56, 0.14);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.16);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.info-card:hover,
+.devcard:hover {
+    transform: translateY(-9px);
+    background:
+        linear-gradient(145deg,
+            rgba(84, 125, 138, 0.96),
+            rgba(8, 17, 15, 0.96));
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.22);
+}
+
+.info-card .icon,
+.devcard .icon {
+    width: 4rem;
+    height: 4rem;
+    display: grid;
+    font-size: 2rem;
+    place-content: center;
+    align-self: center;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 15px;
+
+    margin-bottom: 1.5rem;
+}
+
+.info-card h3,
+.devcard h3 {
+    font-size: 2rem;
+    align-self: center;
+    margin-bottom: 1rem;
+}
+
+.info-card p,
+.devcard p {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.card-link {
+    color: whitesmoke;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: auto;
+    padding-top: 1.6rem;
+    align-self: center;
+}
+
+.card-link span {
+    margin-left: 0.4rem;
+    transition: margin-left 0.2s ease;
+}
+
+.card-link:hover span {
+    margin-left: 0.8rem;
+}
+
+/* Account card */
+
+.account-card {
+    background:
+        linear-gradient(145deg,
+            rgba(29, 68, 59, 0.95),
+            rgba(8, 17, 15, 0.9));
+}
+
+.account-card:hover {
+    background:
+        linear-gradient(145deg,
+            rgba(36, 85, 73, 0.96),
+            rgba(8, 17, 15, 0.96));
+}
+
+.account-buttons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: auto;
+    padding-top: 1.5rem;
+}
+
+/* 
+   BUTTONS
+    */
+
+.btn {
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+
+    min-width: 10vw;
+    padding: 11px 19px;
+
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+.btn-login {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgb(255, 255, 255);
+}
+
+.btn-login:hover {
+    background: skyblue;
+    color: #173c3d;
+    transform: translateY(-3px);
+}
+
+.btn-signup {
+    background: #8d98df;
+    color: whitesmoke;
+    border: 1px solid #8d98df;
+}
+
+.btn-signup:hover {
+    background: #707bc9;
+    border-color: #707bc9;
+    transform: translateY(-3px);
+}
+
+/* 
+   TESTIMONIALS
+    */
+
+.testimonials {
+    background: rgb(202, 185, 185);
+    padding: 5rem 5%;
+}
+
+.testimonial-heading {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.testimonial-grid {
+    max-width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.testimonial {
+    padding: 1.8rem;
+    background: #ffffff40;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+}
+
+.quote {
+    font-family: Georgia, serif;
+    font-size: 3.5rem;
+    height: 2.4rem;
+    color: #747dd0;
+}
+
+.testimonial p {
+    color: #404347;
+    font-size: 1.25rem;
+    text-align: center;
+    margin: 0.8rem 0 1rem;
+    margin-bottom: 2rem;
+}
+
+.testimonial strong,
+.testimonial small,
+.devcard strong {
+    display: block;
+    text-align: end;
+}
+
+.testimonial strong,
+.devcard strong {
+    color: #6178bf;
+    font-size: 1.5rem;
+}
+
+.testimonial small,
+.devcard small {
+    color: #21c4d3;
+    font-size: 1.2rem;
+}
+
+/* This SECTION OF STYLING CAN BE REMOVED AS THE all.css AREADY INCLUDE CTA PART.
+   FINAL CTA
+    */
+
+.cta {
+    max-width: 80%;
+    margin: 70px auto;
+    padding: 3rem 3.2rem;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(120deg,
+            #171b22,
+            #28332f);
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+
+.cta h2 {
+    font-size: clamp(25px, 4vw, 36px);
+    margin: 0.5rem 0;
+}
+
+.cta p {
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 1.25rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    flex-shrink: 0;
+}
+
+/* 
+   FOOTER
+    */
+
+.footer {
+    background: #171a21;
+    color: white;
+
+    padding: 4rem 5% 2.8rem;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 3.4rem;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-brand h2 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.footer-brand p {
+    color: #aeb4bf;
+    max-width: 24rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.footer-brand small {
+    color: #202225;
+    font-size: 1.4rem;
+    text-emphasis: initial;
+    background-color: salmon;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.footer-column h3 {
+    margin-bottom: 8px;
+    font-size: 1.6rem;
+}
+
+.footer-column a {
+    color: #9da4af;
+    font-size: 1.5rem;
+    transition: 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: white;
+    transform: translateX(4px);
+}
+
+/* 
+TABLET
+    */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 15px 4%;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .cards,
+    .devcards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card h3,
+    .card p,
+    .devcard h3,
+    .devcard p {
+        align-self: center;
+
+    }
+
+    .account-card,
+    .contact-us-card {
+        grid-column: 1 / -1;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta {
+        margin-left: 4%;
+        max-width: 100%;
+        margin-right: 4%;
+    }
+
+    .footer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+/* 
+   MOBILE
+    */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .hero {
+        min-height: 300px;
+    }
+
+    .hero-content {
+        padding: 40px 20px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .cards-section,
+    .testimonials,
+    .dev-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .cards,
+    .devcards {
+        grid-template-columns: 1fr;
+    }
+
+
+    .account-card,
+    .contact-us-card {
+        max-width: 100%;
+        grid-column: auto;
+        text-align: center;
+    }
+
+    /* in This section need to centerize paragraph for conract-us-card*/
+    .info-card,
+    .devcard {
+        min-height: 20rem;
+    }
+
+    .account-buttons {
+        width: 100%;
+    }
+
+    .account-buttons .btn {
+        flex: 1;
+    }
+
+    .cta {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 35px 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cta-buttons {
+        width: 100%;
+    }
+
+    .cta-buttons .btn {
+        flex: 1;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+}

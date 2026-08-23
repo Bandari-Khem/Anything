@@ -1,0 +1,200 @@
+body {
+    background: linear-gradient(#afd1de, #ebb3dd, #b2d4de);
+
+}
+
+.fig {
+    display: flex;
+    gap: 5rem;
+}
+
+.rounded {
+    color: gray;
+    background-color: #ffffff50;
+}
+
+/* 
+   HERO
+    */
+
+.hero {
+    min-height: auto;
+    background-image: url("../images/e-Learning2.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 40dvh;
+
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg,
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.60),
+            rgba(0, 0, 0, 0.90));
+    border-radius: 1rem;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: rgb(224, 192, 9);
+    max-width: auto;
+    padding: 50px 25px;
+}
+
+.eyebrow,
+.section-heading>span,
+.testimonial-heading>span {
+    font-size: 1.4rem;
+    color: rgb(15, 164, 223);
+    font-weight: 800;
+    letter-spacing: 2px;
+    opacity: 100;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.1;
+    margin: 12px 0 16px;
+}
+
+.hero p {
+    max-width: 65rem;
+    margin: auto;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+.collection {
+    padding: 2.5rem 1.5rem;
+    background-color: #24212190;
+}
+
+.collection a {
+    display: block;
+    text-align: center;
+}
+
+.text-success {
+    text-align: center;
+    background-color: #afd1de90;
+}
+
+.text-success h2 {
+    color: black;
+}
+
+.book-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.4rem;
+    margin-top: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.book {
+    background-color: #ffffff90;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+}
+
+.book:hover {
+    transform: translateY(-5px);
+}
+
+.book img {
+    width: 100%;
+    height: 10dvh;
+    object-fit: cover;
+}
+
+.book h3 {
+    margin: 0.6rem;
+    font-size: 1rem;
+    text-align: center;
+    color: #333;
+    z-index: 10;
+}
+
+.book p {
+    margin: 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+    color: #666;
+}
+
+.top {
+    background-color: #ffffff50;
+}
+
+.top h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(49, 61, 65);
+}
+
+.message h1 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.message p {
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.message h2 {
+    font-style: italic;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.user-reviews {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.review {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #7147e3;
+    animation: slideIn 1s ease-in-out;
+}
+
+.reviewer {
+    font-style: italic;
+    margin-top: 10px;
+    color: #555;
+}
+
+
+
+@media (max-width: 768px) {
+    .book-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .book-row {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

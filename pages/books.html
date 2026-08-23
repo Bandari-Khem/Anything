@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link rel="stylesheet" href="../all.css">
+    <link rel="stylesheet" href="../bookstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="shortcut icon" href="../../images/logo.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <a href="../index.html" class="logo"> <i class="fa-solid fa-book-open"></i>
+            eLibrary</a>
+
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="books.html">Books</a>
+            <a href="contact-us.html">Contact Us</a>
+            <a href="about-us.html">About Us</a>
+            <a href="#setting" class="settings-icon"><i class="fa-solid fa-gear"></i></a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Find the Books You're Looking For</h1>
+            <p style="font-style: italic;">
+                Use keywords, categories, or authors to narrow down your search and discover the perfect book for your
+                next
+                read.
+            </p>
+        </section>
+
+        <section class="search-section">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search books...">
+            </div>
+        </section>
+
+        <section class="book-list">
+            <div id="bookContainer"></div>
+        </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-brand">
+            <h2>eLibrary</h2>
+            <p>Your one-stop destination for books and reading experiences.</p>
+            <small><i class="fa-solid fa-copyright"></i> 2026 eLibrary. All rights reserved.</small>
+        </div>
+
+        <div class="footer-column">
+            <h3>For More Information</h3>
+            <a href="../index.html"><i class="fa-solid fa-home"></i> Home</a>
+            <a href="about-us.html"><i class="fa-solid fa-search"></i> About Us</a>
+            <a href="contact-us.html"><i class="fa-solid fa-phone"></i> Contact Us</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Follow Us</h3>
+            <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
+            <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+            <a href="#linkedin"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        </div>
+    </footer>
+    <!-- script to fetch and display books -->
+    <script src="script.js"></script>
+</body>
+
+</html>
